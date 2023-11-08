@@ -17,14 +17,27 @@
 ///-=============================================================================================-*///
 '''
 
-import os
-import numpy
-from scipy import stats
+import os, sys, numpy
+from PyQt5 import QtCore
+from PyQt5 import QtGui
+from scipy import *
+from PyQt5 import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
 
 #region Konstanten, Variablen und Deklarationen
 '''
 ///*********************************************************************************************************
 ///* Konstanten, Variablen und Deklarationen                                                               *
+///*********************************************************************************************************
+'''
+
+#endregion
+
+#region MyApp Class
+'''
+///*********************************************************************************************************
+///* MyApp Class                                                                                           *
 ///*********************************************************************************************************
 '''
 
@@ -108,6 +121,116 @@ def ai_Func_S2():
 ///* Standardfunktionen und -verfahren                                                                     *
 ///*********************************************************************************************************
 '''
+
+'''
+/// dialog() funktion zur 
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/17
+/// 
+'''
+def dialog():
+    mbox = QMessageBox()
+
+    mbox.setText("Your allegiance has been noted")
+    mbox.setDetailedText("You are now a disciple and subject of the all-knowing Guru")
+    mbox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+    #mbox.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    mbox.exec_()
+
+'''
+/// mainWindow() funktion zur 
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/17
+/// 
+'''
+def mainWindow():
+    class MyApp(QWidget):
+        def __init__(self):
+            super().__init__()
+            self.initUI()
+
+        def initUI(self):
+            #qWin = QWidget()
+            self.setWindowTitle("Artificial Intelligence Test by Python")
+            self.setWindowIcon(QtGui.QIcon("Images/Python3.png"))
+            width = 850
+            height = 500
+            self.resize(width, height)
+            self.setFixedSize(width, height)
+            self.center()
+
+
+            # Stop here to decide a decision to add text editor and paste A.I function output in 1402/08/18 by Engineer Behdad Pourtavakoli
+            label = QLabel(self)
+            label.setText("Behold the Guru, Guru99")
+            label.move(100, 130)
+            label.show()
+
+            btn = QPushButton(self)
+            btn.setText('Beheld')
+            btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+            btn.move(110, 150)
+            btn.show()
+            btn.clicked.connect(dialog)
+
+            btn1 = QPushButton("Athos")
+            btn1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+            btn2 = QPushButton("Porthos")
+            btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+            btn3 = QPushButton("Aramis")
+            btn3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+
+            hbox = QHBoxLayout(self)
+
+            hbox.addWidget(btn1)
+            hbox.addWidget(btn2)
+            hbox.addWidget(btn3)
+
+            self.show()
+
+        def center(self):
+            qr = self.frameGeometry()
+            cp = QDesktopWidget().availableGeometry().center()
+            qr.moveCenter(cp)
+            self.move(qr.topLeft())
+
+    if (__name__ == "__main__"):
+        #qApp = QApplication([])
+        qApp = QApplication(sys.argv)
+
+        ex = MyApp()
+        sys.exit(qApp.exec_())
+
+    ### Subclass QMainWindow to customize your application's main window
+    ##class MainWindow(QMainWindow):
+    ##    def __init__(self):
+    ##        super().__init__()
+
+    ##        self.setWindowTitle("Artificial Intelligence Test by Python")
+    ##        self.setFixedSize(QSize(800, 600))
+
+    ##        button = QPushButton("Click")
+
+    ##        # Set the central widget of the Window.
+    ##        self.setCentralWidget(button)
+
+    ##app = QApplication(sys.argv)
+
+    ##window = MainWindow()
+    ##window.show()
+
+    ##app.exec()
+
+    # You need one (and only one) QApplication instance per application.
+    # Pass in sys.argv to allow command line arguments for your app.
+    # If you know you won't use command line arguments QApplication([]) works too.
+    #qApp = QApplication(sys.argv)
+
+    # Create a Qt widget, which will be our window.
+    #qWindow = QMainWindow() #QPushButton("Push Me") #QWidget()
+    #qWindow.show()  # IMPORTANT!!!!! Windows are hidden by default.
+
+    # Start the event loop.
+    #qApp.exec()
+
 #endregion
 
 #region Hauptprogramm
@@ -116,6 +239,8 @@ def ai_Func_S2():
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
 /// 
 '''
+
+mainWindow()
 
 about_DE()
 ai_Func_S1()
