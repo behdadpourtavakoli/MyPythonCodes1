@@ -302,7 +302,7 @@ def frmAboutBox_EN():
 
      frmAbout1.geometry("%dx%d+%d+%d" % (intWidth, intHeight, inyPosX, intPosY))
  
-     strTitle = "Behdad Software Developers Group™ Presents\n\n"
+     strTitle =  "Behdad Software Developers Group™ Presents\n\n"
      strTitle += "Welcome to the B.S.D Group™ Production\n\n"
      strTitle += "Copyright© 1380-1402,2001-2023 by B.S.D Group™\n"
      strTitle += "All rights reserved.\n\n"
