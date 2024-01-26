@@ -7,7 +7,7 @@
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// ----------------------------------------------------------------------------------------------
-/// Copyright© 1380-1402,2001-2023 von B.S.D Group™
+/// Copyright© 1380-1402,2001-2024 von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// ----------------------------------------------------------------------------------------------
 ///
@@ -51,7 +51,7 @@ def about_EN():
      
      print("Welcome to the B.S.D Group™ Production\n")
      
-     print("Copyright© 1380-1402,2001-2023 by B.S.D Group™")
+     print("Copyright© 1380-1402,2001-2024 by B.S.D Group™")
      print("All rights reserved.\n")
      
      print("Design and develop by Engineer Behdad Pourtavakoli\n")
@@ -70,7 +70,7 @@ def about_DE():
      
      print("Willkommen bei B.S.D Group™ Produktion\n")
      
-     print("Urheberrecht© 1380-1402,2001-2023 von B.S.D Group™")
+     print("Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™")
      print("Alle Rechte vorbehalten.\n")
      
      print("Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n")
@@ -304,7 +304,7 @@ def frmAboutBox_EN():
  
      strTitle =  "Behdad Software Developers Group™ Presents\n\n"
      strTitle += "Welcome to the B.S.D Group™ Production\n\n"
-     strTitle += "Copyright© 1380-1402,2001-2023 by B.S.D Group™\n"
+     strTitle += "Copyright© 1380-1402,2001-2024 by B.S.D Group™\n"
      strTitle += "All rights reserved.\n\n"
      strTitle += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
      strTitle += "®MyFirstPy2.py - B.S.D Group™\n"
@@ -366,7 +366,7 @@ def frmAboutBox_DE():
  
      strTitle = "Behdad Software Developers Group™ praesentiert\n\n"
      strTitle += "Willkommen bei B.S.D Group™ Produktion\n\n"
-     strTitle += "Urheberrecht© 1380-1402,2001-2023 von B.S.D Group™\n"
+     strTitle += "Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™\n"
      strTitle += "Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n\n"
      strTitle += "®MyFirstPy2.py - B.S.D Group™\n"
      strTitle += "www.mongard.ir, coderslegacy.com, www.tutorialspoint.com sind Lehrer...\n\n"
