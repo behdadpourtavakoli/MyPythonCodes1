@@ -1,3 +1,4 @@
+#region Copyright
 '''
 ///*-==================================================================================================-*
 /// Dateiname             : Py_AI_Test1.py (Artificial Intelligence Test by Python)
@@ -18,7 +19,14 @@
 ///               codeloop.org, python-course.eu
 ///-===================================================================================================-*///
 '''
+#endregion
 
+#region Important header files
+'''
+///*********************************************************************************************************
+///* Important header files                                                                                *
+///*********************************************************************************************************
+'''
 import os, numpy, sys
 from PyQt5 import *
 from PyQt5.QtCore import *
@@ -26,12 +34,13 @@ from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from numpy.random.mtrand import _rand
-from scipy import *
+#from scipy import *
 from scipy import stats
 from tkinter import *
 from PIL import Image, ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
+#endregion
 
 #region Konstanten, Variablen und Deklarationen
 '''
@@ -267,7 +276,7 @@ def dlgAbout():
     strTitle += "Copyright© 1380-1402,2001-2024 by B.S.D Group™\n"
     strTitle += "All rights reserved.\n\n"
     strTitle += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
-    strTitle += "®Py_AI_Test1.py - B.S.D Group™\n"
+    strTitle += "®Py_AI_Test1.py (Python Project) - B.S.D Group™\n"
 
     lblTitle1 = Label(frmAbout2, text = strTitle).pack(pady = 15)
 
@@ -364,5 +373,4 @@ def sysEOP():
 /// 
 '''
 mainWindow()
-
 #endregion

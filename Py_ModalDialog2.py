@@ -1,3 +1,31 @@
+import tkinter as tk
+
+class App(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+
+myapp = App()
+myapp.master.title('Tkinter Pack Layout')
+
+intWidth = 550
+intHeight = 300
+myapp.master.minsize(intWidth, intHeight)
+myapp.master.maxsize(1024, 768)
+
+screen_width = myapp.master.winfo_screenwidth()
+screen_height = myapp.master.winfo_screenheight()
+inyPosX = (screen_width / 2) - (intWidth / 2)
+intPosY = (screen_height / 2) - (intHeight / 2)
+myapp.master.geometry("%dx%d+%d+%d" % (intWidth, intHeight, inyPosX, intPosY))
+
+label1 = tk.Label(master=myapp.master, text='Tkinter',bg='red',fg='white').pack(side=tk.TOP)
+label2 = tk.Label(master=myapp.master,text='Pack Layout',bg='green', fg='white').pack(side=tk.TOP)
+label3 = tk.Label(master=myapp.master, text='Demo',bg='blue', fg='white').pack(side=tk.TOP)
+
+myapp.master.mainloop()
+exit(0)
+
 from tkinter import *
 
 class simpledialog(object):
