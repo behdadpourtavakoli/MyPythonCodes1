@@ -1,21 +1,55 @@
 #region Urheberrechte
 '''
-///*-=============================================================================================-*
+///*-===========================================================================================================-*
 /// Dateiname             : MyFirstPy2.py
 /// Version               : 1.0.0.0
 /// Beginn                : 2023-06-02 (1402/03/12)
-/// Letzte Aktualisierung : 2024-02-08 (1402/11/19)
+/// Letzte Aktualisierung : 2024-03-01 (1402/12/11)
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
-/// ----------------------------------------------------------------------------------------------
+/// --------------------------------------------------------------------------------------------------------------
 /// Copyright© 1380-1402,2001-2024 von B.S.D Group™
 /// Alle Rechte vorbehalten.
-/// ----------------------------------------------------------------------------------------------
+/// --------------------------------------------------------------------------------------------------------------
 ///
 /// Beschreibung: Überprüfung und Erlernen der Python-Programmierung auf der w3schools-Website und
 ///               (https://www.mongard.ir/courses/python-beginner-course/) im PDF-Format
 ///
-///-=============================================================================================-*///
+/// Nachdem ich mit Chatgpt geplaudert hatte, empfahl es mir, einige wichtige Dinge zu lernen:
+///
+/// Einige einfache Python-Fragen:
+///
+/// Your answers are correct! Let me clarify each one:
+/// 
+///  1) Yes, that's correct. The code snippet swaps the values of x and y. The final output would
+///  be:
+///       x:10
+///       y:5
+///  2) A list is a mutable sequence of elements, meaning you can change its elements after creation. 
+///     A tuple, on the other hand, is an immutable sequence of elements, meaning you cannot change 
+///     its elements after creation.
+///  3) The range() function in Python generates a sequence of numbers within a given range, usually 
+///     used with the for loop. For example, range(10) generates numbers from 0 to 9.
+///  4) A function in Python is defined using the def keyword, followed by the function name, parentheses, 
+///     and a colon. The function body is indented and contains the code to be executed when the function 
+///     is called.
+///  5) A local variable is defined within a function and is only accessible within that function. A 
+///     global variable is defined outside any function and is accessible throughout the program, 
+///     including within functions.
+///
+/// Certainly! Here are a few more advanced Python questions for you:
+///  1. How do you implement a singleton pattern in Python?
+///  2. What is the difference between a generator and a generator expression in Python?
+///  3. What is the use of the "nonlocal" keyword in Python?
+///  4. How do you create a context manager in Python?
+///  5. What are decorators in Python and how do you use them?
+///  6. What is the purpose of the "@staticmethod" and "@classmethod" decorators in Python?
+///  7. How do you implement a lazy iterator using Python's generator functions?
+///  8. How do you implement a depth-first search (DFS) using Python's built-in functions and data structures?
+///  9. What is the difference between a list and a tuple in Python?
+///  10. How do you create a custom exception class in Python?
+/// 
+///-============================================================================================================-*
 '''
 #endregion
 
@@ -40,8 +74,8 @@ import hashlib
 ///* Konstanten, Variablen und Deklarationen                                                               *
 ///*********************************************************************************************************
 '''
-#frmAbout1 = Tk()
-#frmAbout2 = Tk()
+frmAbout1 = Tk()
+frmAbout2 = Tk()
 #endregion
 
 #region Handschriftliche Funktionen und Prozeduren 1
@@ -126,7 +160,6 @@ def Trennlinie(bolLF = False, chrTL = '*', intMax = 70):
 /// chrSpace = Leerer Designraum, Standardwert: ' '
 /// chrEndSpace = Leerer Design-Endraum, Standardwert: ' '
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def DreieckZeichne(intType = 1, intLength = 10, chrDraw = '*', chrSpace = ' ', chrEndSpace = ' '):
      for intI in range(intLength, 0, -1):
@@ -149,7 +182,6 @@ def DreieckZeichne(intType = 1, intLength = 10, chrDraw = '*', chrSpace = ' ', c
 /// chrSpace = Leerer Designraum, Standardwert: ' '
 /// chrEndSpace = Leerer Design-Endraum, Standardwert: ' '
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def RauteZeichne1(intLength = 10, chrDraw = '*', chrSpace = ' ', chrEndSpace = ' '):
      for intI in range(intLength, 0, -1):
@@ -184,7 +216,6 @@ def RauteZeichne1(intLength = 10, chrDraw = '*', chrSpace = ' ', chrEndSpace = '
 /// chrEndSpace1 = Leerer Design-Endraum, Standardwert: ''
 /// chrEndSpace2 = Leerer Design-Endraum, Standardwert: ' '
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def RauteZeichne2(intLength = 11, chrDraw = '*', chrSpace = ' ', chrEndSpace1 = '', chrEndSpace2 = ' '):
      intI = 1
@@ -228,7 +259,6 @@ def RauteZeichne2(intLength = 11, chrDraw = '*', chrSpace = ' ', chrEndSpace1 = 
 /// intSek = Sekunden zum Warten, Standardwert: 5
 /// intWG = Ruhezeit für Schleife pro Sekunde, Standardwert: 0.3
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def WirdGeladen(intSek = 5, intWG = 0.3):
      for intTik in range(0, intSek+1):
@@ -239,7 +269,6 @@ def WirdGeladen(intSek = 5, intWG = 0.3):
 '''
 /// AktuelleZeileLöschen()-Funktion zum Löschen der aktuellen Konsolenzeile.
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def AktuelleZeileLöschen():
      intOSSize = os.get_terminal_size()
@@ -254,7 +283,6 @@ def AktuelleZeileLöschen():
 /// intZählen = Anzahl der Iterations-Zufallszahlen, Standardwert: 100
 /// intWG = Ruhezeit für Schleife pro Sekunde, Standardwert: 0.01
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/22
-/// 
 '''
 def ZufälligeDatendemo(intZählen = 100, intWG = 0.01):
      for intTik in range(0, intZählen+1):
@@ -270,7 +298,6 @@ def ZufälligeDatendemo(intZählen = 100, intWG = 0.01):
 /// Überprüfen Sie es noch einmal
 /// https://www.w3schools.com/python/ und andere Webseiten
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/20
-/// 
 '''
 def ReviewAgain():
      print("Überprüfen Sie es noch einmal", end="\n\n")
@@ -421,7 +448,6 @@ def Converts():
 /// Mongrad1()-Funktion zum Erlernen der Python-Lektion 1 von der Website Mongard.ir
 /// 0) Intro, 1) Variable
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/07/21
-/// 
 '''
 def Mongrad1():
      #print("print('wow')\n")
@@ -439,7 +465,6 @@ def Mongrad1():
 /// Mongrad2()-Funktion zum Erlernen der Python-Lektion 2 von der Website Mongard.ir
 /// 2) String
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/07/21
-/// 
 '''
 def Mongrad2():
      name = 'Hallo, ich heisse Behdad Pourtavakoli.'\
@@ -456,7 +481,6 @@ def Mongrad2():
 /// Mongrad3()-Funktion zum Erlernen der Python-Lektion 3 von der Website Mongard.ir
 /// 3) List
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/07/21
-/// 
 '''
 def Mongrad3():
      names = ["Behdad", "Software", "Developers", "Groups™", "B.S.D", "Ingeniuer"]
@@ -473,7 +497,6 @@ def Mongrad3():
 /// Mongrad4()-Funktion zum Erlernen der Python-Lektion 4 von der Website Mongard.ir
 /// 3) While
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/07/26
-/// 
 '''
 def Mongrad4():
      print("while:")
@@ -487,6 +510,15 @@ def Mongrad4():
 
           #a, b = b, a+b
           a = a + 1
+
+'''
+/// W3Schools1()-Funktion zum Erlernen der Python-Lektionen von der Website w3schools.com
+/// 3) While
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/12/11
+'''
+def W3Schools1():
+     print()
+
 #endregion
 
 #region Erstellen Sie ein Tkinter-Fenster
@@ -512,7 +544,6 @@ class Hello(Frame):
 '''
 /// frmAboutBox_EN()-Funktion zum Erstellen eines Fensters mit Python
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
-/// 
 '''
 def frmAboutBox_EN():
 
@@ -578,7 +609,6 @@ def frmAboutBox_EN():
 '''
 /// cmdClose1()-Funktion zum Schließen des frmAboutBox_EN-Fensters
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
-/// 
 '''
 def cmdClose1():
      if (__name__ == '__main__'):
@@ -587,7 +617,6 @@ def cmdClose1():
 '''
 /// frmAboutBox_DE()-Funktion zum Erstellen eines Fensters mit Python
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
-/// 
 '''
 def frmAboutBox_DE():
 
@@ -637,7 +666,6 @@ def frmAboutBox_DE():
 '''
 /// cmdClose2()-Funktion zum Schließen des frmAboutBox_DE-Fensters
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
-/// 
 '''
 def cmdClose2():
      if (__name__ == '__main__'):
@@ -647,7 +675,6 @@ def cmdClose2():
 /// frmTestFenster()-Funktion zum Erstellen eines Fensters mit Python
 /// Am Beispiel der Website coderslegacy.com
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/08/16
-/// 
 '''
 def frmTestFenster():
      root = Tk()
@@ -792,7 +819,6 @@ def MultiProcessing1():
 '''
 /// WinMain() enthält Hauptanweisungen und aufrufende Funktionen
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
-/// 
 '''
 def WinMain():
      intStartTime = time.time()
@@ -801,7 +827,7 @@ def WinMain():
      Trennlinie(False, '=')
      Über(False)
      Trennlinie()
-
+     
      #frmAboutBox_EN()
      #frmAboutBox_DE()
 
@@ -828,7 +854,7 @@ def WinMain():
 
      ''' /// Überprüfen Sie es noch einmal - 1402/11/20 (2024/02/09) '''
      ReviewAgain()
-
+     
      Trennlinie()
      intEndTime = time.time()
      intElapsedTime = intEndTime - intStartTime
@@ -838,7 +864,8 @@ def WinMain():
      Trennlinie(False, '-')
 
      print("Drücken Sie die Eingabetaste, um den Vorgang zu beenden...", end='')
-     input()
+     frmAbout1 = frmAbout2 = None
+     x = input()
      Trennlinie(False, '-')
 
 #endregion
@@ -852,7 +879,6 @@ def WinMain():
 '''
 /// Hauptprogramm, enthält Hauptanweisungen und Aufruffunktionen
 /// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/07/21
-/// 
 '''
 if (__name__ == "__main__"):
     WinMain()
