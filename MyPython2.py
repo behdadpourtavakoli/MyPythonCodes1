@@ -7,10 +7,10 @@
 /// Letzte Aktualisierung : 2024-03-01 (1402/12/11)
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
-/// --------------------------------------------------------------------------------------------------------------
-/// Copyright© 1380-1402,2001-2024 von B.S.D Group™
+/// -------------------------------------------------------------------------------------------------------------
+/// Copyright© 1380-1403,2001-2024 von B.S.D Group™
 /// Alle Rechte vorbehalten.
-/// --------------------------------------------------------------------------------------------------------------
+/// -------------------------------------------------------------------------------------------------------------
 ///
 /// Beschreibung: Überprüfung und Erlernen der Python-Programmierung auf der w3schools-Website und
 ///               (https://www.mongard.ir/courses/python-beginner-course/) im PDF-Format
@@ -56,22 +56,25 @@
 #region Wichtige Header-Dateien
 '''
 ///*********************************************************************************************************
-///* Wichtige Header-Dateien                                                                               *
+///* Wichtige Header-Dateien
+///*
+///* pip3 freeze > requirements.txt
 ///*********************************************************************************************************
 '''
-import os, random, time, platform #, subprocess, sys, locale
+import os, random, time, hashlib, platform, pythoncom #, subprocess, sys, locale
 from tkinter import *
 from PIL import Image, ImageTk
 #from datetime import datetime
+from tqdm import tqdm
+from progress.bar import (PixelBar, ShadyBar)
+from progress.spinner import (PixelSpinner)
 
-# Python 3 code to demonstrate the SHA1
-import hashlib
 #endregion
 
 #region Konstanten, Variablen und Deklarationen
 '''
 ///*********************************************************************************************************
-///* Konstanten, Variablen und Deklarationen                                                               *
+///* Konstanten, Variablen und Deklarationen
 ///*********************************************************************************************************
 '''
 frmAbout1 = Tk()
@@ -81,7 +84,7 @@ frmAbout2 = Tk()
 #region Handschriftliche Funktionen und Prozeduren 1
 '''
 ///*********************************************************************************************************
-///* Handschriftliche Funktionen und Prozeduren 1                                                          *
+///* Handschriftliche Funktionen und Prozeduren 1
 ///*********************************************************************************************************
 '''
 
@@ -91,13 +94,13 @@ frmAbout2 = Tk()
 '''
 def KlarerBildschirm():
      # For Windows
-     if (os.name == 'nt'):
-          _ = os.system('cls')
-          #_ = subprocess.call('cls')
+     if (os.name == "nt"):
+          _ = os.system("cls")
+          #_ = subprocess.call("cls")
      # For macOS and Linux
-     elif (os.name == 'posix'):
-          _ = os.system('clear')
-          #_ = subprocess.call('clear')
+     elif (os.name == "posix"):
+          _ = os.system("clear")
+          #_ = subprocess.call("clear")
 
 '''
 /// Über()-Funktion zur Anzeige von Programminformationen, Versionsnummer und Urheberrecht als Englisch oder Deutsch
@@ -114,25 +117,25 @@ def Über(bolModus = True):
           
           strNachricht += "Welcome to the B.S.D Group™ Production\n\n"
           
-          strNachricht += "Copyright© 1380-1402,2001-2024 by B.S.D Group™\n"
+          strNachricht += "Copyright© 1380-1403,2001-2024 by B.S.D Group™\n"
           strNachricht += "All rights reserved.\n\n"
           
           strNachricht += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
           
           strNachricht += "®MyFirstPy2.py (Python v" + strVersionVersionsnummer + ") - B.S.D Group™\n"
-          strNachricht += "www.w3schools.com, www.mongard.ir, coderslegacy.com, www.tutorialspoint.com are teachers..."
+          strNachricht += "www.w3schools.com, www.mongard.ir, coderslegacy.com, www.tutorialspoint.com, Telegram ChatGPT, and more websites are teachers..."
      else:
           strNachricht = "Behdad Software Developers Group™ praesentiert\n\n"
           
           strNachricht += "Willkommen bei B.S.D Group™ Produktion\n\n"
           
-          strNachricht += "Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™\n"
+          strNachricht += "Urheberrecht© 1380-1403,2001-2024 von B.S.D Group™\n"
           strNachricht += "Alle Rechte vorbehalten.\n\n"
           
           strNachricht += "Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n\n"
           
           strNachricht += "®MyFirstPy2.py (Pythonv" + strVersionVersionsnummer + ") - B.S.D Group™\n"
-          strNachricht += "www.w3schools.com, www.mongard.ir, coderslegacy.com, www.tutorialspoint.com sind Lehrer..."
+          strNachricht += "www.w3schools.com, www.mongard.ir, coderslegacy.com, www.tutorialspoint.com, Telegram ChatGPT, and more websites sind Lehrer..."
      print(strNachricht)
 
 '''
@@ -264,7 +267,73 @@ def WirdGeladen(intSek = 5, intWG = 0.3):
      for intTik in range(0, intSek+1):
           strOutput = "Wird geladen" + "." * intTik
           print(strOutput, end="\r")
+          pythoncom.PumpWaitingMessages()
           time.sleep(intWG)
+
+'''
+/// WirdGeladen2()-Funktion um das Warten etwas zu verkürzen.
+/// Parameter:
+/// intMax = Maximale Länge des Fortschrittsbalkens, Standardwert: 100
+/// intTyp = Art des Fortschrittsbalkens, Standardwert: 1
+/// intSec = maximale Wartezeit in Sekunden, Standardwert: 10 Sekunden
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/12/12
+'''
+def WirdGeladen2(intMax = 100, intTyp = 1, intSek = 10):
+
+     suffix = '%(percent)d%% [%(elapsed_td)s / %(eta)d / %(eta_td)s]'
+     with PixelSpinner('Processing...', suffix=suffix) as bar:
+          for i in range(intMax):
+               # Etwas tun.
+               intSleep = (random.randint(1, intSek)) / 100
+               time.sleep(intSleep)
+               pythoncom.PumpWaitingMessages()
+               bar.next()
+
+     return()
+
+     # classic, classic2, smooth, blocks, bubbles, hollow, solid, circles, squares, checks, filling
+     #with alive_bar(150, bar = 'classic2', spinner = 'notes') as bar:
+     #with alive_bar(150, bar = 'classic2', spinner = '') as bar:
+     #     for i in range(150):
+     #          sleep(0.005)
+     #          bar()
+     
+     #with Bar("Processing…") as bar:
+     #with Bar("Loading", fill='…', suffix="%(percent).1f%% - %(eta)ds") as bar:
+     #with Bar("Loading", fill='*', suffix="%(percent).1f%% - %(eta)ds") as bar:
+     #with Bar("Loading", fill='#', suffix="%(percent).1f%% - %(eta)ds") as bar:
+     #with MoonSpinner('Processing…') as bar:
+          #for intLoop in range(intMax):
+          #     # Etwas tun.
+          #     intSleep = (random.randint(1, intSek)) / 100
+          #     sleep(intSleep)
+          #     pythoncom.PumpWaitingMessages()
+          #     bar.next()
+          
+     #intMAX = int(9e6)
+     #intMAX = 100
+     intSek = 10
+     
+     for i in tqdm(range(intMAX)):
+          # Etwas tun.
+          intSleep = (random.randint(1, intSek)) / 150
+          time.sleep(intSleep)
+          pythoncom.PumpWaitingMessages()
+          pass
+     
+     for i in tqdm(range(intMAX), ncols=62):
+          # Etwas tun.
+          intSleep = (random.randint(1, intSek)) / 150
+          time.sleep(intSleep)
+          pythoncom.PumpWaitingMessages()
+          pass
+          
+     for i in tqdm(range(intMAX), ascii=True, desc="Progress:"):
+          # Etwas tun.
+          intSleep = (random.randint(1, intSek)) / 150
+          time.sleep(intSleep)
+          pythoncom.PumpWaitingMessages()
+          pass
 
 '''
 /// AktuelleZeileLöschen()-Funktion zum Löschen der aktuellen Konsolenzeile.
@@ -317,7 +386,7 @@ def ReviewAgain():
 #region Handschriftliche Funktionen und Prozeduren 2
 '''
 ///*********************************************************************************************************
-///* Handschriftliche Funktionen und Prozeduren 2                                                          *
+///* Handschriftliche Funktionen und Prozeduren 2
 ///*********************************************************************************************************
 '''
 
@@ -512,11 +581,123 @@ def Mongrad4():
           a = a + 1
 
 '''
-/// W3Schools1()-Funktion zum Erlernen der Python-Lektionen von der Website w3schools.com
-/// 3) While
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/12/11
+/// ErrorHandling()-Funktion zum Erlernen der Python-Lektionen von dem ChatGPT
+/// Sehen Sie sich die Python-Lektionen von Anfang an an:
+/// Lektion 1: Einführung in Python -- Kursiert.
+/// Lektion 2: Datentypen           -- Kursiert.
+/// Lektion 3: Operatoren           -- Kursiert.
+/// Lektion 4: Kontrollstrukturen   -- Kursiert.
+/// Lektion 5: Fehlerbehandlung     -- Neue Lektion
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/12/13
+'''
+def ErrorHandling():
+     try:
+          x = int(input("Enter a number: "))
+          print(10 / x)
+     except ValueError:
+          print("Invalid input. Please enter a valid number.")
+     except ZeroDivisionError:
+          print("Cannot divide by zero.")
+     print()
+
+'''
+/// ChatGPT1()-Funktion zum Erlernen der Python-Lektionen von dem ChatGPT
+/// Lektion 6: Dateihandhabung (Wortanzahl, Zeichenanzahl, Durchschnittliche Wörter pro Zeile, 
+///            Längstes Wort, Kürzestes Wort)
+/// 
+/// HINZUGEFÜGT von Ingenieur B.Pourtavakoli im Jahr 1402/12/11 und einige Änderungen im Jahr 1402/12/14
+'''
+def ChatGPT1():
+     try:
+          strFilename1 = "Text-Editor\\License"
+          file1 = open(strFilename1, 'r')
+          contents1 = file1.read()
+          #print(contents1)
+
+          words = contents1.split()
+          word_count = len(words)
+          print("Word count:", word_count)
+
+          char_count = len(contents1)
+          print("Character count:", char_count)
+
+          print("Average words per line:", word_count / contents1.count(''))
+          print("Longest word:", max(words, key=len))
+          print("Shortest word:", min(words, key=len))
+          
+          lines = contents1.split('''
+          ''')
+          word_counts = [len(line.split()) for line in lines]
+          print("Average words per line:", sum(word_counts) / len(word_counts), "\n")
+     except FileNotFoundError:
+          print("The file", strFilename1, "does not exist.")
+     except IsADirectoryError:
+          print("It's a directory, not a file.")
+     except PermissionError:
+          print("The Permission denied.")
+     except FileExistsError:
+          print("The File Exists Error")
+     except NotADirectoryError:
+          print("Not a Directory Error")
+     except NotImplementedError:
+          print("Not Implemented Error")
+     except Exception as ex:
+          print("An unexpected error occurred:", ex)
+     finally:
+          file1.close()
+
+     try:
+          strFilename2 = "License"
+          
+          if (os.path.exists(strFilename2)):
+               print("The file", strFilename2, "is already exist, The new file is overwritten.")
+          #else:
+          #     print("The file does not exist.")
+          
+          file2 = open(strFilename2, 'w')
+          file2.write(contents1)
+     except FileNotFoundError:
+          print("The file", strFilename2, "does not exist.")
+     except IsADirectoryError:
+          print("It's a directory, not a file.")
+     except PermissionError:
+          print("The Permission denied.")
+     except FileExistsError:
+          print("The File Exists Error")
+     except NotADirectoryError:
+          print("Not a Directory Error")
+     except NotImplementedError:
+          print("Not Implemented Error")
+     except Exception as ex:
+          print("An unexpected error occurred:", ex)
+     finally:
+          file2.close()
+          print("The file", strFilename2, "created successfully.")
+
+'''
+/// DataTypeRecognizer()-Funktion zur Bereitstellung eines klaren Erkennungsdatentyps
+/// Dieser Code ruft jeden Datentyp ab und entfernt alle Nicht-Datentypen wie "<class '...'>"
+/// HINZUGEFÜGT von Ingenieur B.Pourtavakoli am 1402/12/25
+'''
+def DataTypeRecognizer(varDataType):
+     return(str(type(varDataType)).replace("<class '", "").replace("'>", ""))
+
+'''
+/// W3Schools1()-Funktion zum Erlernen der Python-Lektionen von der Website tqdm.github.io, w3schools.com
+/// Fortschrittsbalken von tqdm
+/// HINZUGEFÜGT von Ingenieur B.Pourtavakoli im Jahr 1402/12/11 und einige Änderungen im Jahr 1402/12/25
 '''
 def W3Schools1():
+     lstMultiDataType = [36, 23.5, False, "Wow", 99, True]
+     myList = ((36, 23.5, False, "Wow", 99, True))
+     print("Multi Datatype ", lstMultiDataType, " is ", type(lstMultiDataType), " and length is ", len(lstMultiDataType))
+     print("Multi Datatype ", myList, " is ", type(myList), " and length is ", len(myList))
+     
+     a1 = DataTypeRecognizer(lstMultiDataType)
+     a2 = DataTypeRecognizer(myList)
+     
+     print(a1, a2)
+
      print()
 
 #endregion
@@ -524,7 +705,7 @@ def W3Schools1():
 #region Erstellen Sie ein Tkinter-Fenster
 '''
 ///*********************************************************************************************************
-///* Erstellen Sie ein Tkinter-Fenster                                                                     *
+///* Erstellen Sie ein Tkinter-Fenster
 ///*********************************************************************************************************
 '''
 
@@ -578,7 +759,7 @@ def frmAboutBox_EN():
  
      strTitle =  "Behdad Software Developers Group™ Presents\n\n"
      strTitle += "Welcome to the B.S.D Group™ Production\n\n"
-     strTitle += "Copyright© 1380-1402,2001-2024 by B.S.D Group™\n"
+     strTitle += "Copyright© 1380-1403,2001-2024 by B.S.D Group™\n"
      strTitle += "All rights reserved.\n\n"
      strTitle += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
      strTitle += "®MyFirstPy2.py - B.S.D Group™\n"
@@ -639,10 +820,10 @@ def frmAboutBox_DE():
  
      strTitle = "Behdad Software Developers Group™ praesentiert\n\n"
      strTitle += "Willkommen bei B.S.D Group™ Produktion\n\n"
-     strTitle += "Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™\n"
+     strTitle += "Urheberrecht© 1380-1403,2001-2024 von B.S.D Group™\n"
      strTitle += "Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n\n"
      strTitle += "®MyFirstPy2.py - B.S.D Group™\n"
-     strTitle += "www.mongard.ir, coderslegacy.com, www.tutorialspoint.com sind Lehrer...\n\n"
+     strTitle += "www.w3schools.com, www.mongard.ir, coderslegacy.com, www.tutorialspoint.com, Telegram ChatGPT, and more websites sind Lehrer...\n\n"
 
      lblTitle1 = Label(frmAbout2, text = strTitle).pack(pady = 15)
 
@@ -798,7 +979,7 @@ def frmTestFenster():
 #region Mehrfachverarbeitung
 '''
 ///*********************************************************************************************************
-///* Mehrfachverarbeitung                                                                                  *
+///* Mehrfachverarbeitung
 ///*********************************************************************************************************
 '''
 
@@ -812,7 +993,7 @@ def MultiProcessing1():
 #region Standardfunktionen und -verfahren
 '''
 ///*********************************************************************************************************
-///* Standardfunktionen und -verfahren                                                                     *
+///* Standardfunktionen und -verfahren
 ///*********************************************************************************************************
 '''
 
@@ -853,8 +1034,13 @@ def WinMain():
      #MultiProcessing1()
 
      ''' /// Überprüfen Sie es noch einmal - 1402/11/20 (2024/02/09) '''
-     ReviewAgain()
-     
+     #ReviewAgain()
+     #WirdGeladen2()
+
+     ''' /// Überprüfen Sie es noch einmal - 1402/12/12 (2024/03/02) '''
+     #ChatGPT1()
+     W3Schools1()
+          
      Trennlinie()
      intEndTime = time.time()
      intElapsedTime = intEndTime - intStartTime
@@ -863,10 +1049,10 @@ def WinMain():
      print("Ende des Programms...")
      Trennlinie(False, '-')
 
-     print("Drücken Sie die Eingabetaste, um den Vorgang zu beenden...", end='')
-     frmAbout1 = frmAbout2 = None
-     x = input()
-     Trennlinie(False, '-')
+     #print("Drücken Sie die Eingabetaste, um den Vorgang zu beenden...", end='')
+     #frmAbout1 = frmAbout2 = None
+     #x = input()
+     #Trennlinie(False, '-')
 
 #endregion
 

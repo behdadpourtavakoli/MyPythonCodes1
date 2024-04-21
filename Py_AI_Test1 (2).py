@@ -1,4 +1,3 @@
-#region Copyright
 '''
 ///*-==================================================================================================-*
 /// Dateiname             : Py_AI_Test1.py (Artificial Intelligence Test by Python)
@@ -19,14 +18,7 @@
 ///               codeloop.org, python-course.eu
 ///-===================================================================================================-*///
 '''
-#endregion
 
-#region Important header files
-'''
-///*********************************************************************************************************
-///* Important header files                                                                                *
-///*********************************************************************************************************
-'''
 import os, numpy, sys
 from PyQt5 import *
 from PyQt5.QtCore import *
@@ -34,13 +26,12 @@ from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from numpy.random.mtrand import _rand
-#from scipy import *
+from scipy import *
 from scipy import stats
 from tkinter import *
 from PIL import Image, ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
-#endregion
 
 #region Konstanten, Variablen und Deklarationen
 '''
@@ -68,7 +59,7 @@ def about_DE():
 
     print("Willkommen bei B.S.D Group™ Produktion\n")
 
-    print("Urheberrecht© 1380-1403,2001-2024 von B.S.D Group™")
+    print("Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™")
     print("Alle Rechte vorbehalten.\n")
 
     print("Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n")
@@ -273,10 +264,10 @@ def dlgAbout():
 
     strTitle =  "Behdad Software Developers Group™ Presents\n\n"
     strTitle += "Welcome to the B.S.D Group™ Production\n\n"
-    strTitle += "Copyright© 1380-1403,2001-2024 by B.S.D Group™\n"
+    strTitle += "Copyright© 1380-1402,2001-2024 by B.S.D Group™\n"
     strTitle += "All rights reserved.\n\n"
     strTitle += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
-    strTitle += "®Py_AI_Test1.py (Python Project) - B.S.D Group™\n"
+    strTitle += "®Py_AI_Test1.py - B.S.D Group™\n"
 
     lblTitle1 = Label(frmAbout2, text = strTitle).pack(pady = 15)
 
@@ -373,4 +364,5 @@ def sysEOP():
 /// 
 '''
 mainWindow()
+
 #endregion

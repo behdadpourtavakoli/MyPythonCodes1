@@ -4,11 +4,11 @@
 /// Dateiname             : Quera_Projekte.py
 /// Version               : 1.0.0.0
 /// Beginn                : 2024-02-15 (1402/11/26)
-/// Letzte Aktualisierung : 2024-03-01 (1402/12/11)
+/// Letzte Aktualisierung : 2024-04-05 (1403/01/17)
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// ----------------------------------------------------------------------------------------------
-/// Copyright© 1380-1402,2001-2024 von B.S.D Group™
+/// Copyright© 1380-1403,2001-2024 von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// ----------------------------------------------------------------------------------------------
 ///
@@ -610,6 +610,40 @@ def Decode():
 
     Trennlinie(False, '-')
 
+'''
+/// Salib_Problem() ...
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1403/01/17
+'''
+def Salib_Problem():
+    print("Lösung des Subtraktionsproblems von Salim...\n")
+
+    print("Enter the number (Two-Digits): ", end='')
+    intNumber = int(input())
+
+    intFirstNum = int(intNumber / 10)
+    intSecondNum = int(intNumber % 10)
+
+    intResult = -1
+    if (intFirstNum > intSecondNum):
+        intResult = intFirstNum - intSecondNum
+    else:
+        intResult = intSecondNum - intFirstNum
+        
+    print("Result: ", intResult)
+
+    Trennlinie(False, '-')
+
+'''
+/// Words_Check() ...
+/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1403/01/17
+'''
+def Words_Check():
+    print("Wörter überprüfen von Salim...\n")
+
+    
+
+    Trennlinie(False, '-')
+
 #endregion
 
 #region Standardfunktionen und -verfahren
@@ -643,7 +677,10 @@ def WinMain():
     #Reverse_Numbers()
     #Fast_Sort()
     
-    Decode()
+    #Decode()
+    
+    #Salib_Problem()
+    Words_Check()
     
     intEndTime = time.time()
     intElapsedTime = intEndTime - intStartTime

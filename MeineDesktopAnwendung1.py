@@ -1,16 +1,16 @@
 #region Urheberrechte
 '''
-///*-=============================================================================================-*
+///*-===========================================================================================================-*
 /// Dateiname             : MeineDesktopAnwendung1.py
 /// Version               : 1.0.0.0
 /// Beginn                : 2024-02-12 (1402/11/23)
 /// Letzte Aktualisierung : 2024-02-13 (1402/11/24)
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
-/// ----------------------------------------------------------------------------------------------
-/// Copyright© 1380-1402,2001-2024 von B.S.D Group™
+/// -------------------------------------------------------------------------------------------------------------
+/// Copyright© 1380-1403,2001-2024 von B.S.D Group™
 /// Alle Rechte vorbehalten.
-/// ----------------------------------------------------------------------------------------------
+/// -------------------------------------------------------------------------------------------------------------
 ///
 /// Beschreibung: Überprüfen und lernen Sie die Python-Programmierung anhand von PDF-Artikeln und
 ///               relevanten Websites.
@@ -18,7 +18,7 @@
 ///               Desktop-Anwendung (Window-Anwendung)
 ///               Wahl zwischen TKinter und PyQt, PyQt ist leistungsfähiger als TKinter.
 ///
-///-=============================================================================================-*///
+///-============================================================================================================-*
 '''
 #endregion
 
@@ -103,7 +103,7 @@ class MeineDesktopAnwendung1():
         strVersionVersionsnummer = str(platform.python_version())
         strNachricht = "Behdad Software Developers Group™ praesentiert\n\n"
         strNachricht += "Willkommen bei B.S.D Group™ Produktion\n\n"
-        strNachricht += "Urheberrecht© 1380-1402,2001-2024 von B.S.D Group™\n"
+        strNachricht += "Urheberrecht© 1380-1403,2001-2024 von B.S.D Group™\n"
         strNachricht += "Alle Rechte vorbehalten.\n\n"
         strNachricht += "Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n\n"
         strNachricht += "MeineDesktopAnwendung1.py (Python v" + strVersionVersionsnummer + ") - B.S.D Group™"
