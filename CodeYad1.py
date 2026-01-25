@@ -9,7 +9,7 @@
 /// Autor                 : Engineer Behdad Pourtavakoli
 /// Trademark             : Behdad Software Developers Group™
 /// ----------------------------------------------------------------------------------------------
-/// Copyright © 1380-1403 (2001-2024) by B.S.D Group™
+/// Copyright © 1380-1404 (2001-2026) by B.S.D Group™
 /// All rights reserved.
 /// ----------------------------------------------------------------------------------------------
 ///
@@ -36,9 +36,7 @@ from datetime import datetime, timedelta
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
-
 import numpy as np
-
 
 # **********************************************************************************************************
 # endregion
@@ -269,6 +267,7 @@ def Hash_SHA1(strInput, bolLower = False):
 /// ADDED by engineer B.Pourtavakoli on 1403/07/06
 '''
 class CodeYad1:
+    # region * Old CodeYad Examples 1 *
     '''
     /// ClearScreen()--function to clear output screen
     /// ADDED by engineer B.Pourtavakoli on 1403/06/31
@@ -413,7 +412,9 @@ class CodeYad1:
         intOutput *= 4
         intOutput = int(intOutput)
         print(f"Your answer is {intOutput}")
+    # endregion
 
+    # region * Old CodeYad Examples 2 - List/Tuple/Set/Dictionary *
     '''
     /// CodeYad4(self)--function to review the Python language by CodeYad.com
     /// Contains CodeYad lessons by video: 16 to 24
@@ -570,7 +571,9 @@ class CodeYad1:
                           "Dict4": dicDict4 }
         # print(f"Dictionary: {dicNastedDict} - Type: {type(dicNastedDict)} - Length: {len(dicNastedDict)}")
         print(f"Dictionary: {dicNastedDict.items()}")
+    # endregion
 
+    # region * Old CodeYad Examples 3 *
     '''
     /// has_sufficient_memory(self)--function to ...
     /// ADDED by engineer B.Pourtavakoli on 1403/08/08
@@ -681,7 +684,6 @@ class CodeYad1:
             print()
         print()
 
-
     '''
     /// CodeYad11(self)--function to review the Python language by CodeYad.com
     /// Contains CodeYad lessons by video: 51
@@ -723,48 +725,6 @@ class CodeYad1:
             for j in range(1, i):
                 print(j, end='\t')
             print()
-
-    '''
-    /// Fibonacci(self, n)--function to review the Python language by CodeYad.com
-    /// Fibonacci sequence
-    /// ADDED by engineer B.Pourtavakoli on 1403/07/21
-    '''
-    def Fibonacci(self, n, memo={}, bolPrnFlag = False):
-        '''
-        Fibonacci sequence function(self, n, memo={}, bolPrnFlag = False)
-
-        :param n: An integer representing the position in the Fibonacci sequence.
-        :param memo: A dictionary used to store previously computed Fibonacci numbers (used for memoization).
-        :param bolPrnFlag: A boolean flag to control whether to print each step of the computation or not.
-        :return: The Fibonacci number corresponding to the input n.
-        '''
-        #############################################################################################################
-        # Old version of Fibonacci sequence function
-        #############################################################################################################
-        # if (n <= 1):
-        #     return (n)
-        # return (self.Fibonacci(n-1) + self.Fibonacci(n - 2))
-        
-        # memo = [0] * (n + 1)
-        # memo[0], memo[1] = 0, 1        
-        # for i in range(2, n + 1):
-        #     memo[i] = memo[i-1] + memo[i-2]
-        # return (memo[n])
-        
-        if (bolPrnFlag):
-            print(f"Fibonacci({n}) called")
-        if (n in memo):
-            if (bolPrnFlag):
-                print(f"Fibonacci({n}) from memory: {memo[n]}")
-            return (memo[n])
-        
-        if (n <= 1):
-            return (n)
-        
-        memo[n] = self.Fibonacci(n-1, memo) + self.Fibonacci(n-2, memo)
-        if (bolPrnFlag):
-            print(f"Fibonacci({n}) Calculated: {memo[n]}")
-        return (memo[n])
 
     '''
     /// PwdValidation(self, strPwd)--function to to check a password validation
@@ -1530,7 +1490,9 @@ class CodeYad1:
         )
         # await asyncio.gather(self.task1(), self.task2(), self.task3())
         print("APP Tasks Ended.")
+    # endregion
 
+    # region * New CodeYad Examples 1 *
     def MeineErfahrung1(self):
         '''
         /// MeineErfahrung1(self)--function to continue review the Python language by w3schools and geeksforgeeks
@@ -1779,6 +1741,105 @@ class CodeYad1:
         except Exception as e:
             print(f"OP error: {e}")
 
+    '''
+    /// Fibonacci_New(self, n)--function to review the Python language by CodeYad.com
+    /// Fibonacci sequence
+    /// ADDED by engineer B.Pourtavakoli on 1403/07/21
+    /// UPDATED by engineer B.Pourtavakoli on 1404/10/23
+    '''
+    def Fibonacci_New(self, n, memo={}, bolPrnFlag = False):
+        '''
+        Fibonacci sequence function New(self, n, memo={}, bolPrnFlag = False)
+
+        ADDED by engineer B.Pourtavakoli on 1403/07/21
+        
+        UPDATED by engineer B.Pourtavakoli on 1404/10/23
+
+        :param n: An integer representing the position in the Fibonacci sequence.
+        :param memo: A dictionary used to store previously computed Fibonacci numbers (used for memoization).
+        :param bolPrnFlag: A boolean flag to control whether to print each step of the computation or not.
+        :return: The Fibonacci number corresponding to the input n.
+        '''
+        if (n in memo):
+            return (memo[n])
+        if (n <= 1):
+            return (n)
+        memo[n] = self.Fibonacci(n-1, memo) + self.Fibonacci(n-2, memo)
+        if (bolPrnFlag):
+            print(memo[n], end=', ')
+        return (memo[n])
+
+    def Fibonacci_Old1(self, n, memo={}):
+        '''
+        Fibonacci sequence old method1(n, memo={})
+
+        ADDED by engineer B.Pourtavakoli on 1403/07/21
+        
+        UPDATED by engineer B.Pourtavakoli on 1404/10/23
+        
+        :param n: An integer representing the position in the Fibonacci sequence.
+        :param memo: A dictionary used to store previously computed Fibonacci numbers (used for memoization).
+        :return: The Fibonacci number corresponding to the input n.
+        '''
+        memo = [0] * (n + 1)
+        memo[0], memo[1] = 0, 1        
+        for i in range(2, n + 1):
+            memo[i] = memo[i-1] + memo[i-2]
+        return (memo[n])
+
+    def Fibonacci_Old2(self, n):
+        '''
+        Fibonacci sequence old method2(self, n, memo={}) - **Very slow when input data is big.
+
+        ADDED by engineer B.Pourtavakoli on 1403/07/21
+        
+        UPDATED by engineer B.Pourtavakoli on 1404/10/23
+        
+        :param n: An integer representing the position in the Fibonacci sequence.
+        :return: The Fibonacci number corresponding to the input n.
+        '''
+        if (n <= 1):
+            return (n)
+        return (self.Fibonacci_Old2(n-1) + self.Fibonacci_Old2(n - 2))
+
+    def MeineErfahrung8(self):
+        '''
+        /// MeineErfahrung8(self)--function to continue review the Python language by my whole knowledges
+
+        /// ADDED by engineer B.Pourtavakoli on 1404/10/23
+        '''
+        # Fibonacci series:
+
+        # 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 ...
+        intTemp = 400
+        dtStartTime = time.time()
+        print(f"Fibonacci New ({intTemp}): {self.Fibonacci_New(intTemp)}")
+        dtElapsedTime = time.time() - dtStartTime
+        print(f"⏱️ Elapsed Time (Fibo New Method): {round(dtElapsedTime, 5)} seconds")
+
+        dtStartTime = time.time()
+        print(f"Fibonacci Old 1 ({intTemp}): {self.Fibonacci_Old1(intTemp)}")
+        dtElapsedTime = time.time() - dtStartTime
+        print(f"⏱️ Elapsed Time (Fibo Old Method 2): {round(dtElapsedTime, 5)} seconds")
+
+        intTemp = 34
+        dtStartTime = time.time()
+        print(f"Fibonacci Old 2 ({intTemp}): {self.Fibonacci_Old2(intTemp)}")
+        dtElapsedTime = time.time() - dtStartTime
+        print(f"⏱️ Elapsed Time (Fibo Old Method 1): {round(dtElapsedTime, 5)} seconds")
+
+        # Fibonacci series:
+        # 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 ...
+        intTemp = 40
+        dtStartTime = time.time()
+        print("Fibonacci Series: [", end='')
+        self.Fibonacci_New(intTemp, bolPrnFlag=True)
+        print("\b\b]")
+        dtElapsedTime = time.time() - dtStartTime
+        print(f"⏱️ Elapsed Time (Fibo New Method): {round(dtElapsedTime, 5)} seconds")
+
+    # endregion
+
 # **********************************************************************************************************
 # endregion
 
@@ -1924,14 +1985,18 @@ def WinMain():
     CY1 = CodeYad1()
     CY1.ClearScreen()
 
-    CY1.MeineErfahrung6()
-    CY1.MeineErfahrung7()
+    # New method call - 1404/10/23
+    CY1.MeineErfahrung8()
+    
+    # CY1.MeineErfahrung1()
+    CY1.MeineErfahrung2()
+    
+    # CY1.MeineErfahrung6()
+    # CY1.MeineErfahrung7()
     
     # CY1.MeineErfahrung5()
     # CY1.MeineErfahrung4()
     # CY1.MeineErfahrung3()
-    # CY1.MeineErfahrung2()
-    # CY1.MeineErfahrung1()
     
     # CY1.CodeYad37()
     # CY1.CodeYad36()

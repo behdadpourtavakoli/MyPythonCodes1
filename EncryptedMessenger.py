@@ -9,7 +9,7 @@
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// -------------------------------------------------------------------------------------------------------------
-/// Copyright © 1380-1403 (2001-2024) von B.S.D Group™
+/// Copyright © 1380-1404 (2001-2026) von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// -------------------------------------------------------------------------------------------------------------
 ///
@@ -81,7 +81,7 @@ class clsEncryptedMessenger:
             
             strNachricht += "Welcome to the B.S.D Group™ Production\n\n"
             
-            strNachricht += "Copyright © 1380-1403 (2001-2024) by B.S.D Group™\n"
+            strNachricht += "Copyright © 1380-1404 (2001-2026) by B.S.D Group™\n"
             strNachricht += "All rights reserved.\n\n"
             
             strNachricht += "Design and develop by Engineer Behdad Pourtavakoli\n\n"
@@ -93,7 +93,7 @@ class clsEncryptedMessenger:
             
             strNachricht += "Willkommen bei B.S.D Group™ Produktion\n\n"
             
-            strNachricht += "Urheberrecht © 1380-1403 (2001-2024) von B.S.D Group™\n"
+            strNachricht += "Urheberrecht © 1380-1404 (2001-2026) von B.S.D Group™\n"
             strNachricht += "Alle Rechte vorbehalten.\n\n"
             
             strNachricht += "Entwurf und Entwicklung von Ingenieur Behdad Pourtavakoli\n\n"

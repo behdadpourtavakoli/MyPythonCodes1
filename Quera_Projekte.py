@@ -1,14 +1,16 @@
-#region Urheberrechte
+# region Urheberrechte
+# **********************************************************************************************************
 '''
 ///*-=============================================================================================-*
 /// Dateiname             : Quera_Projekte.py
 /// Version               : 1.0.0.0
 /// Beginn                : 2024-02-15 (1402/11/26)
 /// Letzte Aktualisierung : 2024-04-05 (1403/01/17)
+/// Letzte Aktualisierung : 2025-01-05 (1403/10/16)
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// ----------------------------------------------------------------------------------------------
-/// Copyright© 1380-1403,2001-2024 von B.S.D Group™
+/// Copyright © 1380-1404 (2001-2026) von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// ----------------------------------------------------------------------------------------------
 ///
@@ -17,29 +19,34 @@
 ///
 /// ----------------------------------------------------------------------------------------------
 /// Das Wort des Entwicklers: Vergessen Sie nicht den Ingenieur Behdad Pourtavakoli.
-///-=============================================================================================-*///
+///-=============================================================================================-*
 '''
-#endregion
+# **********************************************************************************************************
+# endregion
 
-#region Wichtige Header-Dateien
+# region Wichtige Header-Dateien
+# **********************************************************************************************************
 '''
 ///*********************************************************************************************************
 ///* Wichtige Header-Dateien
 ///*********************************************************************************************************
 '''
-import time, math, bisect
+import os, time, math, bisect
+# **********************************************************************************************************
+# endregion
 
-#endregion
-
-#region Konstanten, Variablen und Deklarationen
+# region Konstanten, Variablen und Deklarationen
+# **********************************************************************************************************
 '''
 ///*********************************************************************************************************
 ///* Konstanten, Variablen und Deklarationen
 ///*********************************************************************************************************
 '''
-#endregion
+# **********************************************************************************************************
+# endregion
 
-#region Handschriftliche Funktionen und Prozeduren
+# region Handschriftliche Funktionen und Prozeduren
+# **********************************************************************************************************
 '''
 ///*********************************************************************************************************
 ///* Handschriftliche Funktionen und Prozeduren
@@ -52,8 +59,8 @@ import time, math, bisect
 /// bolLF: Zeilenvorschub, Standardwert: False
 /// chrTL: Trennzeichen, Standardwert: '*'
 /// intMax: Anzahl der Zeichenwiederholungen, Standardwert: 70
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/20
-/// UPDATE durch Ingenieur B.Pourtavakoli im Jahr 1402/11/22
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/20
+/// UPDATE von Ingenieur B.Pourtavakoli im Jahr 1402/11/22
 '''
 def Trennlinie(bolLF = False, chrTL = '*', intMax = 70):
      print(*intMax*(chrTL,), sep=' ')
@@ -64,7 +71,7 @@ def Trennlinie(bolLF = False, chrTL = '*', intMax = 70):
 
 '''
 /// Avengers() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
 /// 
 '''
 def Avengers():
@@ -90,7 +97,7 @@ def Avengers():
 
 '''
 /// Perfect_Number() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
 /// 
 '''
 def Perfect_Number():
@@ -123,7 +130,7 @@ def Perfect_Number():
     
 '''
 /// Solve_Snake() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
 /// 
 '''
 def Solve_Snake():
@@ -157,7 +164,7 @@ def Solve_Snake():
 
 '''
 /// Copy_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
 /// 
 '''
 def Copy_Problem():
@@ -178,7 +185,7 @@ def Copy_Problem():
 
 '''
 /// Multiple() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/27
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/27
 /// 
 '''
 def Multiple(intNumber):
@@ -190,7 +197,7 @@ def Multiple(intNumber):
 
 '''
 /// Bagher_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/27
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/27
 /// 
 '''
 def Bagher_Problem():
@@ -215,7 +222,7 @@ def Bagher_Problem():
 
 '''
 /// Right_Triangle() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/27
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/27
 /// 
 '''
 def Right_Triangle():
@@ -243,7 +250,7 @@ def Right_Triangle():
 
 '''
 /// Mehdi_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/27
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/27
 /// 
 '''
 def Mehdi_Problem():
@@ -276,7 +283,7 @@ def Mehdi_Problem():
 
 '''
 /// Print_Number() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/27
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/27
 /// 
 '''
 def Print_Number():
@@ -305,7 +312,7 @@ def Print_Number():
 
 '''
 /// Amin_Routing_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Amin_Routing_Problem():
@@ -328,7 +335,7 @@ def Amin_Routing_Problem():
 
 '''
 /// Yellow_Answer() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Yellow_Answer():
@@ -349,7 +356,7 @@ def Yellow_Answer():
 
 '''
 /// Mr_Khoshghalb() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Mr_Khoshghalb():
@@ -368,7 +375,7 @@ def Mr_Khoshghalb():
 
 '''
 /// Factorial_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Factorial_Problem():
@@ -390,7 +397,7 @@ def Factorial_Problem():
 
 '''
 /// Power_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Power_Problem():
@@ -411,7 +418,7 @@ def Power_Problem():
 
 '''
 /// Reverse_Numbers() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Reverse_Numbers():
@@ -436,7 +443,7 @@ def Reverse_Numbers():
 
 '''
 /// Binäre Sortierfunktionen4() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Insert_Sort4(arrTemp):
@@ -450,7 +457,7 @@ def Insert_Sort4(arrTemp):
 
 '''
 /// Binäre Sortierfunktionen3() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Binary_Search3(arrTemp, intLow, intHigh):
@@ -472,7 +479,7 @@ def Insert_Sort3(arrTemp, intLow, intHigh):
 
 '''
 /// Binäre Sortierfunktionen2() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Binary_Search2(arrTemp, intVal, intStart, intEnd):
@@ -502,7 +509,7 @@ def Insert_Sort2(arrTemp):
 
 '''
 /// Binäre Sortierfunktionen() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Binary_Search(arrTemp, intVal, intStart, intEnd):
@@ -518,7 +525,7 @@ def Insert_Sort(arrTemp):
 
 '''
 /// Fast_Sort() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/28
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/28
 /// 
 '''
 def Fast_Sort():
@@ -537,7 +544,7 @@ def Fast_Sort():
 
 '''
 /// Decode() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/12/11
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/12/11
 /// 
 '''
 def Decode():
@@ -612,7 +619,7 @@ def Decode():
 
 '''
 /// Salib_Problem() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1403/01/17
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1403/01/17
 '''
 def Salib_Problem():
     print("Lösung des Subtraktionsproblems von Salim...\n")
@@ -635,18 +642,116 @@ def Salib_Problem():
 
 '''
 /// Words_Check() ...
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1403/01/17
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1403/01/17
 '''
 def Words_Check():
     print("Wörter überprüfen von Salim...\n")
 
-    
-
     Trennlinie(False, '-')
 
-#endregion
+def Quick_Sort(arr):
+    # اگر طول آرایه کمتر از 2 باشد، نیازی به مرتب‌سازی نیست
+    if len(arr) < 2:
+        return arr
+    # انتخاب محور (Pivot)
+    pivot = arr[0]
+    
+    # تقسیم آرایه به دو قسمت: اعداد کمتر از محور و اعداد بزرگتر یا مساوی با محور
+    left = [x for x in arr[1:] if x < pivot]
+    right = [x for x in arr[1:] if x >= pivot]
+    
+    # بازگشت به صورت بازگشتی برای مرتب کردن قسمت‌ها و ادغام آنها
+    return Quick_Sort(left) + [pivot] + Quick_Sort(right)
 
-#region Standardfunktionen und -verfahren
+def QuickSort():
+    input_string = input()
+    numbers = list(map(int, input_string.split()))
+    sorted_numbers = Quick_Sort(numbers)
+    print(" ".join(map(str, sorted_numbers)))
+
+'''
+/// PrintSquare()-Funktion zum Zeichnen eines Quadrats nach Benutzerparametern
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1403/10/16 - 15:19
+'''
+def PrintSquare():
+    print("Enter the n Number: ", end='')
+    strNum = input()
+    try:
+        intNum = int(strNum)
+    except (TypeError, ValueError):
+        print('Not an integer')
+    if (intNum < 3 or intNum > 10):
+        return
+    
+    for i in range(intNum):
+        print("*", end='')
+    print()
+    
+    for i in range(intNum-2):
+        print("*", end='')
+        for j in range(intNum-1):
+            print(" ", end='')
+        print("*\r\n", end='')
+
+    for i in range(intNum):
+        print("*", end='')
+    print()
+
+'''
+/// InterCompanyAccount1()-Funktion zum Berechnen von Intercompany-Konten
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1403/10/16 - 23:39
+'''
+def InterCompanyAccount1():
+    arrICA = [
+        [0, 200, 100],
+        [300, 0, 50],
+        [150, 0, 0]
+    ]
+    print(arrICA)
+    
+    n = len(arrICA)
+    arrProfit = [0] * n
+    for i in range(n):
+        for j in range(n):
+            arrProfit[i] += arrICA[j][i] - arrICA[i][j]
+    print(arrProfit)
+
+'''
+/// InterCompanyAccount2()-Funktion zum Berechnen und Anzeigen der m*n-Matrix/des m*n-Arrays.
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1403/10/17 - 08:39
+'''
+def InterCompanyAccount2():
+
+    arrICA = [
+        [0, 200, 100],
+        [300, 0, 50],
+        [150, 0, 0]
+    ]
+    for row in arrICA:
+        print(row)
+    print()
+    
+    max_length = max(len(str(abs(num))) for row in arrICA for num in row)
+
+    # cell_width = 8
+    cell_width = max_length + 1
+
+    n = len(arrICA)
+    net_balance = [0] * n
+    for i in range(n):
+        for j in range(n):
+            net_balance[i] += arrICA[j][i] - arrICA[i][j]
+            # print(net_balance, end='\t')
+            # print("".join(f"{val:{cell_width}}" for val in net_balance), end="\t")
+            print("[" + ", ".join(f"{val:{cell_width}}" for val in net_balance) + "]", end="\t")
+        print()
+    print()
+
+# **********************************************************************************************************
+# endregion
+
+# region Standardfunktionen und -verfahren
+# **********************************************************************************************************
 '''
 ///*********************************************************************************************************
 ///* Standardfunktionen und -verfahren
@@ -655,32 +760,46 @@ def Words_Check():
 
 '''
 /// WinMain() enthält Hauptanweisungen und aufrufende Funktionen
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
+/// AKTUALISIERT von Ingenieur B.Pourtavakoli am 1403/10/16
 /// 
 '''
 def WinMain():
     intStartTime = time.time()
 
-    #Avengers()
-    #Perfect_Number()
-    #Solve_Snake()
-    #Copy_Problem()
-    #Bagher_Problem()
-    #Right_Triangle()
-    #Mehdi_Problem()
-    #Print_Number()
-    #Amin_Routing_Problem()
-    #Yellow_Answer()
-    #Mr_Khoshghalb()
-    #Factorial_Problem()
-    #Power_Problem()
-    #Reverse_Numbers()
-    #Fast_Sort()
+    if (os.name == "nt"):
+        _ = os.system("cls")
+
+    # 1403/10/17 - 08:39
+    InterCompanyAccount2()
     
-    #Decode()
-    
-    #Salib_Problem()
-    Words_Check()
+    # 1403/10/16 - 23:37
+    # InterCompanyAccount1()
+
+    # 1403/10/16 : 15:03
+    # PrintSquare()
+
+    # QuickSort()
+    # Avengers()
+    # Perfect_Number()
+    # Solve_Snake()
+    # Copy_Problem()
+    # Bagher_Problem()
+    # Right_Triangle()
+    # Mehdi_Problem()
+    # Print_Number()
+    # Amin_Routing_Problem()
+    # Yellow_Answer()
+    # Mr_Khoshghalb()
+    # Factorial_Problem()
+    # Power_Problem()
+    # Reverse_Numbers()
+    # Fast_Sort()
+     
+    # Decode()
+     
+    # Salib_Problem()
+    # Words_Check()
     
     intEndTime = time.time()
     intElapsedTime = intEndTime - intStartTime
@@ -688,9 +807,11 @@ def WinMain():
     
     print("Press Enter key to exit...", end='')
     input()
-#endregion
+# **********************************************************************************************************
+# endregion
  
-#region Hauptprogramm
+# region Hauptprogramm
+# **********************************************************************************************************
 '''
 ///*********************************************************************************************************
 ///* Hauptprogramm
@@ -698,9 +819,10 @@ def WinMain():
 '''
 '''
 /// Hauptprogramm, enthält Hauptanweisungen und Aufruffunktionen
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/26
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/26
 /// 
 '''
 if (__name__ == "__main__"):
     WinMain()
-#endregion
+# **********************************************************************************************************
+# endregion

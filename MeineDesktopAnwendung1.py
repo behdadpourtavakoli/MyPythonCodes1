@@ -1,4 +1,4 @@
-#region Urheberrechte
+# region Urheberrechte
 '''
 ///*-===========================================================================================================-*
 /// Dateiname             : MeineDesktopAnwendung1.py
@@ -8,7 +8,7 @@
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// -------------------------------------------------------------------------------------------------------------
-/// Copyright© 1380-1403,2001-2024 von B.S.D Group™
+/// Copyright© 1380-1404,2001-2026 von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// -------------------------------------------------------------------------------------------------------------
 ///
@@ -20,9 +20,9 @@
 ///
 ///-============================================================================================================-*
 '''
-#endregion
+# endregion
 
-#region Wichtige Module und Header-Dateien
+# region Wichtige Module und Header-Dateien
 '''
 ///*********************************************************************************************************
 ///* Wichtige Module und Header-Dateien
@@ -31,18 +31,18 @@
 import time, platform
 from tkinter import *
 #import tkinter as tk
-#endregion
+# endregion
 
-#region Konstanten, Variablen und Deklarationen
+# region Konstanten, Variablen und Deklarationen
 '''
 ///*********************************************************************************************************
 ///* Konstanten, Variablen und Deklarationen
 ///*********************************************************************************************************
 '''
 tkMainForm = Tk()
-#endregion
+# endregion
 
-#region Klasse MeineDesktopAnwendung1
+# region Klasse MeineDesktopAnwendung1
 '''
 ///*********************************************************************************************************
 ///* Klasse MeineDesktopAnwendung1
@@ -103,9 +103,9 @@ class MeineDesktopAnwendung1():
         strVersionVersionsnummer = str(platform.python_version())
         strNachricht = "Behdad Software Developers Group™ praesentiert\n\n"
         strNachricht += "Willkommen bei B.S.D Group™ Produktion\n\n"
-        strNachricht += "Urheberrecht© 1380-1403,2001-2024 von B.S.D Group™\n"
+        strNachricht += "Urheberrecht© 1380-1404,2001-2026 von B.S.D Group™\n"
         strNachricht += "Alle Rechte vorbehalten.\n\n"
-        strNachricht += "Entwurf und Entwicklung durch Ingenieur Behdad Pourtavakoli\n\n"
+        strNachricht += "Entwurf und Entwicklung von Ingenieur Behdad Pourtavakoli\n\n"
         strNachricht += "MeineDesktopAnwendung1.py (Python v" + strVersionVersionsnummer + ") - B.S.D Group™"
 
         lblTemp = Label(tkMainForm, text = strNachricht)
@@ -131,18 +131,18 @@ class MeineDesktopAnwendung1():
 
     def cmdExit(self):
         self.window.destroy()
-#endregion
+# endregion
 
-#region Handschriftliche Funktionen und Prozeduren
+# region Handschriftliche Funktionen und Prozeduren
 '''
 ///*********************************************************************************************************
 ///* Handschriftliche Funktionen und Prozeduren
 ///*********************************************************************************************************
 '''
 
-#endregion
+# endregion
 
-#region Standardfunktionen und -verfahren
+# region Standardfunktionen und -verfahren
 '''
 ///*********************************************************************************************************
 ///* Standardfunktionen und -verfahren
@@ -151,7 +151,7 @@ class MeineDesktopAnwendung1():
 
 '''
 /// WinMain() enthält Hauptanweisungen und aufrufende Funktionen
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/23
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/23
 /// 
 '''
 def WinMain():
@@ -166,9 +166,9 @@ def WinMain():
     intEndTime = time.time()
     intElapsedTime = intEndTime - intStartTime
     print("Elapsed Time: %s ms" % round(intElapsedTime, 3))
-#endregion
+# endregion
  
-#region Hauptprogramm
+# region Hauptprogramm
 '''
 ///*********************************************************************************************************
 ///* Hauptprogramm
@@ -176,9 +176,9 @@ def WinMain():
 '''
 '''
 /// Hauptprogramm, enthält Hauptanweisungen und Aufruffunktionen
-/// HINZUFÜGEN durch Ingenieur B.Pourtavakoli im 1402/11/23
+/// HINZUFÜGEN von Ingenieur B.Pourtavakoli im 1402/11/23
 /// 
 '''
 if (__name__ == "__main__"):
     WinMain()
-#endregion
+# endregion

@@ -9,7 +9,7 @@
 /// Autor                 : Ingenieur Behdad Pourtavakoli
 /// Warenzeichen          : Behdad Software Developers Group™
 /// -------------------------------------------------------------------------------------------------------------
-/// Copyright © 1380-1403 (2001-2024) von B.S.D Group™
+/// Copyright © 1380-1404 (2001-2026) von B.S.D Group™
 /// Alle Rechte vorbehalten.
 /// -------------------------------------------------------------------------------------------------------------
 ///
